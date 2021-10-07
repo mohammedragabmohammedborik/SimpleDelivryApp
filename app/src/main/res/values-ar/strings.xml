@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">توصيل سريع</string>
+    <string name="your_order_has_been_delivered">     تم توصيل طلبك بنجاح </string>
+    <string name="ok">Ok</string>
+    <string name="order_success">تمت عملية الدفع بنجاح</string>
+    <string name="order_number">رقم العملية</string>
+    <string name="confirm_delivery">يجب تاكيد الوصول</string>
+    <string name="confirm">تاكيد</string>
+    <string name="cancel">الغاء</string>
+    <string name="payment_confirmation"> تاكيد الدفع </string>
+    <string name="enter_amount"> ادخل السعر </string>
+    <string name="send">Send</string>
+    <string name="accept"> موافق</string>
+    <string name="more_details">.....التفاصيل</string>
+    <string name="client_name"> اسم العميل :</string>
+    <string name="title_address">: العنوان</string>
+    <string name="order_name"> اسم الطلب :</string>
+    <string name="order_number_p"> رقم الطلب :</string>
+    <string name="more_details_off_order">مزيد من التفاصيل</string>
+    <string name="order_details">  تفاصيل الاوردر</string>
+    <string name="price_details"> تفاصيل السعر </string>
+    <string name="tax">الضريبة :</string>
+    <string name="delivery_cost"> تكلفة التوصيل</string>
+    <string name="order_price"> سعر الطلب  </string>
+    <string name="close">اغلاق</string>
+    <string name="start"> بدأ</string>
+    <string name="total_price">  السعر الكلي </string>
+    <string name="new_orders">طلبات جديده</string>
+    <string name="orders_details">علاج طبيعي به كثير من المكونات الطبيعية</string>
+    <string name="normal_drugs">علاج طبيعي</string>
+    <string name="must_filled"> يجب مليء الخانه</string>
+    <string name="not_applicavle">not applicable</string>
+    <string name="new_message">New Message!</string>
+    <string name="pyment_succes_text">\" تم الدفع بنجاح\"</string>
+    <string name="add_text">الفيوم- ابشواي - الحامولي</string>
+    <string name="mo_text">محمد احمد</string>
+
+</resources>

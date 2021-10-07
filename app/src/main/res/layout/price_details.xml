@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/curved_wighte_top"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/cairobold"
+        android:text="@string/price_details"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/order_name_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cairobold"
+        android:text="@string/order_price"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/order_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="1100.0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+
+        app:layout_constraintStart_toEndOf="@+id/order_name_id"
+        app:layout_constraintTop_toTopOf="@+id/order_name_id" />
+
+    <TextView
+        android:id="@+id/order_number_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/delivery_cost"
+        android:fontFamily="@font/cairobold"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_name_id" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/cairo_regular"
+        android:text="30"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/order_number_id" />
+
+    <TextView
+        android:id="@+id/mor_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tax"
+        android:fontFamily="@font/cairobold"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_number_id" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="70"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp14"
+        android:fontFamily="@font/cairo_regular"
+        app:layout_constraintStart_toEndOf="@+id/mor_details"
+        app:layout_constraintTop_toBottomOf="@+id/order_number_id" />
+
+    <Button
+        android:id="@+id/close_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Close"
+        android:textAllCaps="false"
+        android:fontFamily="@font/cairobold"
+        android:textSize="@dimen/sp16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+</androidx.constraintlayout.widget.ConstraintLayout>

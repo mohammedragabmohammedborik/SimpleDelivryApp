@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.mohammedragab.simpledelivryapp.modellayer.ModelOrderDelivery" />
+        <variable
+            name="click"
+            type="com.mohammedragab.simpledelivryapp.ui.orderdeliveryfragrment.adapter.ClickeDelivery" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen16"
+        app:cardElevation="@dimen/dimen8"
+        app:cardCornerRadius="@dimen/dimen8"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:background="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+             />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="-8dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/price"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/order_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{model.nameOrder}"
+            android:fontFamily="@font/cairo_regular"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/purple_500"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/more_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:onClick="@{()->click.orderDetails(model)}"
+            android:fontFamily="@font/cairo_regular"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/purple_500"
+            android:text="@string/more_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/order_name" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/cairo_regular"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/purple_500"
+            android:text='@{ @string/total_price+""+String.valueOf(model.toatlprice)}'
+            app:layout_constraintStart_toStartOf="@+id/order_name"
+            app:layout_constraintTop_toBottomOf="@+id/order_name" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="@{()->click.priceDetails(model)}"
+            android:fontFamily="@font/cairo_regular"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/purple_500"
+            android:text="@string/more_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/order_name" />
+
+        <TextView
+            android:id="@+id/client_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/cairo_regular"
+            android:text="@string/client_name"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/client_name_assign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cairo_regular"
+            android:text="@{model.clientName}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toEndOf="@+id/client_name"
+            app:layout_constraintTop_toTopOf="@+id/client_name" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_baseline_phone_forwarded_24"
+            android:drawablePadding="@dimen/dimen8"
+            android:fontFamily="@font/cairo_regular"
+            android:onClick="@{()->click.callPhone(model.phone)}"
+            android:text="@{model.phone}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/client_name" />
+
+        <TextView
+            android:id="@+id/address_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/cairo_regular"
+            android:text="@string/title_address"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimen8"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/cairo_regular"
+            android:gravity="start"
+
+            android:maxLines="2"
+            android:text="@{model.addrss}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/address_id"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/cairobold"
+            android:minWidth="120dp"
+            android:onClick="@{()->click.startDelivery(model.orderId)}"
+            android:text="@string/accept"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.561"
+            app:layout_constraintStart_toStartOf="@+id/address_id"
+            app:layout_constraintTop_toBottomOf="@+id/address_id" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

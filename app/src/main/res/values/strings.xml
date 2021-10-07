@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">FastDelivery</string>
+    <string name="your_order_has_been_delivered">Your order has been delivered</string>
+    <string name="ok">Ok</string>
+    <string name="order_success">Payment Success</string>
+    <string name="order_number"> Order Transaction</string>
+    <string name="confirm_delivery"> Must confirm arrival</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="payment_confirmation">Payment Confirmation</string>
+    <string name="enter_amount"> price </string>
+    <string name="send">Send</string>
+    <string name="accept">Accept</string>
+    <string name="more_details">Details......</string>
+    <string name="client_name"> Client Name :</string>
+    <string name="title_address">Address :</string>
+    <string name="order_name">Order Name :</string>
+    <string name="order_number_p">Order Number :</string>
+    <string name="more_details_off_order"> Details </string>
+    <string name="order_details">Order Details</string>
+    <string name="price_details">Price Details</string>
+    <string name="tax">Tax</string>
+    <string name="delivery_cost">Delivery Cost</string>
+    <string name="order_price">Order price</string>
+    <string name="close">Close</string>
+    <string name="start">Start</string>
+    <string name="total_price">Total Price :</string>
+    <string name="new_orders"> New Orders </string>
+    <string name="orders_details">A natural remedy with many natural ingredients</string>
+    <string name="normal_drugs"> A natural remedy</string>
+    <string name="must_filled">must filled</string>
+    <string name="not_applicavle">not applicable</string>
+    <string name="new_message">New Message!</string>
+    <string name="pyment_succes_text"> Payment Success</string>
+    <string name="add_text">الفيوم- ابشواي - الحامولي</string>
+    <string name="mo_text">محمد احمد</string>
+</resources>

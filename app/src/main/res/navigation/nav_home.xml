@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/deliveryOrdersFragment">
+
+    <fragment
+        android:id="@+id/deliveryOrdersFragment"
+        android:name="com.mohammedragab.simpledelivryapp.ui.orderdeliveryfragrment.DeliveryOrdersFragment"
+        android:label="DeliveryOrdersFragment"
+        tools:layout="@layout/home_layout"
+        >
+        <action
+            android:id="@+id/to_price_details"
+            app:destination="@id/priceDetailsFragmentDialog" />
+        <action
+            android:id="@+id/to_order_details"
+            app:destination="@id/orderDetailsFragmentDialog" />
+
+        <action
+            android:id="@+id/to_map"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/orderDetailsFragmentDialog"
+        android:name="com.mohammedragab.simpledelivryapp.ui.orderdeliveryfragrment.orderdetails.OrderDetailsFragmentDialog"
+        android:label="OrderDetailsFragmentDialog"
+        tools:layout="@layout/order_details"
+        />
+    <dialog
+        android:id="@+id/priceDetailsFragmentDialog"
+        android:name="com.mohammedragab.simpledelivryapp.ui.orderdeliveryfragrment.orderdetails.PriceDetailsFragmentDialog"
+        android:label="PriceDetailsFragmentDialog"
+        tools:layout="@layout/price_details"
+        />
+    <dialog
+        android:id="@+id/clientDetailsFragmentDialog"
+        android:name="com.mohammedragab.simpledelivryapp.ui.orderdeliveryfragrment.delivryprocess.ClientDetailsFragmentDialog"
+        android:label="ClientDetailsFragmentDialog"
+        tools:layout="@layout/client_details"
+        />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.mohammedragab.simpledelivryapp.ui.orderdeliveryfragrment.delivryprocess.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/to_client_details"
+            app:destination="@id/clientDetailsFragmentDialog" />
+    </fragment>
+
+
+</navigation>
